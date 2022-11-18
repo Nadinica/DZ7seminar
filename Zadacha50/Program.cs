@@ -13,9 +13,9 @@
 
 void FillandPrint(int[,] matrix)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 1; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 1; j < matrix.GetLength(1); j++)
         {
             matrix[i, j] = new Random().Next(1, 20);
             Console.Write(matrix[i, j] + "\t");
@@ -28,7 +28,7 @@ Console.WriteLine("Введите параметры искомой позици
 int x = Convert.ToInt32(Console.ReadLine());
 int y = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
-int[,] matr = new int[5, 4];
+int[,] matr = new int[10, 10];
 FillandPrint(matr);
 
 if (x <= matr.GetLength(0) - 1)
